@@ -1,0 +1,590 @@
+rhel-i386-server-5
+rhel-i386-client-5
+rhn-tools-rhel-i386-server-5
+rhn-tools-rhel-i386-client-5
+rhel-i386-server-vt-5
+rhel-x86_64-server-5
+rhel-x86_64-client-5
+rhn-tools-rhel-x86_64-server-5
+rhn-tools-rhel-x86_64-client-5
+rhel-ia64-server-5
+rhel-ia64-client-5
+rhn-tools-rhel-ia64-server-5
+rhn-tools-rhel-ia64-client-5
+rhel-i386-as-4
+rhel-i386-es-4
+rhel-i386-ws-4
+rhn-tools-rhel-4-as-i386
+rhn-tools-rhel-4-es-i386
+rhn-tools-rhel-4-ws-i386
+redhat-rhn-proxy-5.1-as-i386-4
+rhel-ia64-server-vt-5
+rhel-x86_64-server-vt-5
+rhel-ia64-as-4
+rhel-ia64-es-4
+rhel-ia64-ws-4
+rhn-tools-rhel-4-as-ia64
+rhn-tools-rhel-4-es-ia64
+rhn-tools-rhel-4-ws-ia64
+rhel-x86_64-as-4
+rhel-x86_64-es-4
+rhel-x86_64-ws-4
+rhn-tools-rhel-4-as-x86_64
+rhn-tools-rhel-4-es-x86_64
+rhn-tools-rhel-4-ws-x86_64
+rhel-i386-as-3
+rhel-i386-es-3
+rhel-i386-ws-3
+rhn-tools-rhel-3-as-i386
+rhn-tools-rhel-3-es-i386
+rhn-tools-rhel-3-ws-i386
+rhel-ia64-as-3
+rhel-ia64-es-3
+rhel-ia64-ws-3
+rhn-tools-rhel-3-as-ia64
+rhn-tools-rhel-3-es-ia64
+rhn-tools-rhel-3-ws-ia64
+rhel-x86_64-as-3
+rhel-x86_64-es-3
+rhel-x86_64-ws-3
+rhn-tools-rhel-3-as-x86_64
+rhn-tools-rhel-3-es-x86_64
+rhn-tools-rhel-3-ws-x86_64
+
+
+
+base-channels:
+10:29:41       . redhat-advanced-server-i386              3734
+10:29:41       . redhat-ent-linux-i386-es-2.1             3225
+10:29:41       . redhat-ent-linux-i386-ws-2.1             3213
+10:29:41       . redhat-linux-alpha-6.2                   1184
+10:29:41       . redhat-linux-alpha-7.0                   1412
+10:29:41       . redhat-linux-alpha-7.1                   1487
+10:29:41       . redhat-linux-as-2.1-IPF                  3184
+10:29:41       . redhat-linux-aw-2.1-IPF                  3169
+10:29:41       . redhat-linux-ee-i386-6.2                   13
+10:29:41       . redhat-linux-i386-6.2                    1357
+10:29:41       . redhat-linux-i386-7.0                    1615
+10:29:41       . redhat-linux-i386-7.1                    2046
+10:29:41       . redhat-linux-i386-7.2                    2338
+10:29:41       . redhat-linux-i386-7.3                    2481
+10:29:42       . redhat-linux-i386-8.0                    2316
+10:29:42       . redhat-linux-i386-9                      1864
+10:29:42       . redhat-linux-iSeries-7.1                 1135
+10:29:42       . redhat-linux-ia64-7.1                    1392
+10:29:42       . redhat-linux-ia64-7.2                    1886
+10:29:42       . redhat-linux-pSeries-7.1                 1135
+10:29:42       . redhat-linux-s390-7.2                    1447
+10:29:42       . redhat-linux-s390x-7.1                    977
+10:29:42       . redhat-linux-severn-i386-9.0.93          1455
+10:29:42       . redhat-linux-sparc-6.2                   1201
+10:29:42       . rh-i386-desktop-4                        5374
+10:29:42       . rh-x86_64-desktop-4                      6149
+10:29:42       . rhel-i386-as-3                           4954
+10:29:43       p rhel-i386-as-4                           5416
+10:29:43       . rhel-i386-client-5                       3256
+10:29:43       . rhel-i386-desktop-3                      4299
+10:29:43       . rhel-i386-es-3                           4973
+10:29:43       . rhel-i386-es-4                           5416
+10:29:43       p rhel-i386-server-5                       4042
+10:29:43       . rhel-i386-ws-3                           4900
+10:29:44       . rhel-i386-ws-4                           5374
+10:29:44       . rhel-ia64-as-3                           5187
+10:29:44       . rhel-ia64-as-4                           5687
+10:29:44       . rhel-ia64-es-3                           4723
+10:29:44       . rhel-ia64-es-4                           5686
+10:29:44       . rhel-ia64-server-5                       4147
+10:29:44       . rhel-ia64-ws-3                           5137
+10:29:45       . rhel-ia64-ws-4                           5648
+10:29:45       . rhel-ppc-as-3                            5289
+10:29:45       . rhel-ppc-as-4                            6077
+10:29:45       . rhel-ppc-server-5                        5248
+10:29:46       . rhel-x86_64-as-3                         5452
+10:29:46       . rhel-x86_64-as-4                         6191
+10:29:46       . rhel-x86_64-client-5                     3831
+10:29:46       . rhel-x86_64-desktop-3                    4819
+10:29:46       . rhel-x86_64-es-3                         4956
+10:29:46       . rhel-x86_64-es-4                         6191
+10:29:46       . rhel-x86_64-server-5                     5305
+10:29:47       . rhel-x86_64-ws-3                         5397
+10:29:47       . rhel-x86_64-ws-4                         6149
+10:29:47       . severn-beta2-i386                        1466
+10:29:47       . solaris-sparc-9                             0
+10:29:47    redhat-advanced-server-i386:
+10:29:47       . rhn-tools-rhel-2.1-as-i386               1524
+10:29:47       . redhat-rhn-proxy-3.6-as-i386-2.1           17
+10:29:47       . redhat-rhn-proxy-3.7-as-i386-2.1           11
+10:29:47       . redhat-rhn-proxy-3.2-as-i386-2.1           26
+10:29:47       . redhat-rhn-proxy-as-i386-2.1               33
+10:29:47    redhat-ent-linux-i386-es-2.1:
+10:29:47       . rhn-tools-rhel-2.1-es-i386               1524
+10:29:47    redhat-ent-linux-i386-ws-2.1:
+10:29:47       . rhn-tools-rhel-2.1-ws-i386               1524
+10:29:47    redhat-linux-alpha-6.2:
+10:29:47       . redhat-powertools-alpha-6.2               532
+10:29:47    redhat-linux-alpha-7.0:
+10:29:47       . redhat-powertools-alpha-7.0               461
+10:29:47    redhat-linux-alpha-7.1:
+10:29:47       . redhat-powertools-alpha-7.1               459
+10:29:47    redhat-linux-as-2.1-IPF:
+10:29:47       . rhn-tools-rhel-2.1-as-ia64               1192
+10:29:47    redhat-linux-aw-2.1-IPF:
+10:29:47       . rhn-tools-rhel-2.1-aw-ia64               1192
+10:29:47    redhat-linux-i386-6.2:
+10:29:47       . redhat-powertools-i386-6.2                584
+10:29:47    redhat-linux-i386-7.0:
+10:29:47       . redhat-powertools-i386-7.0                520
+10:29:47    redhat-linux-i386-7.1:
+10:29:47       . redhat-powertools-i386-7.1                541
+10:29:47    redhat-linux-i386-7.2:
+10:29:47       . redhat-rhn-proxy-i386-7.2                  48
+10:29:47       . k12ltsp-i386-7.2                           63
+10:29:47    redhat-linux-i386-7.3:
+10:29:47       . redhat-gcc3.1-i386-7.3                     12
+10:29:47       . education-k12ltsp-i386-7.3                 82
+10:29:47       . education-general-i386-7.3                  7
+10:29:47    redhat-linux-i386-8.0:
+10:29:47       . education-k12ltsp-i386-8.0                122
+10:29:47    redhat-linux-i386-9:
+10:29:47       . rhn-tools-redhat-linux-i386-9            1514
+10:29:47       . education-k12ltsp-i386-9                  123
+10:29:47    redhat-linux-severn-i386-9.0.93:
+10:29:47       . redhat-linux-severn-i386-9.0.93-updates  2388
+10:29:47    redhat-linux-sparc-6.2:
+10:29:47       . redhat-powertools-sparc-6.2               480
+10:29:47    rh-i386-desktop-4:
+10:29:47       . rh-i386-desktop-4-extras                  222
+10:29:47       . rh-i386-desktop-4-fastrack                209
+10:29:47       . rhn-tools-rhel-4-desktop-i386            1274
+10:29:47    rh-x86_64-desktop-4:
+10:29:47       . rhn-tools-rhel-4-desktop-x86_64          1274
+10:29:47       . rh-x86_64-desktop-4-extras                163
+10:29:47       . rh-x86_64-desktop-4-fastrack              233
+10:29:47    rhel-i386-as-3:
+10:29:47       . redhat-rhn-proxy-4.1-as-i386-3             94
+10:29:47       . rhel-i386-as-3-fastrack                    56
+10:29:47       . redhat-rhn-proxy-4.2-as-i386-3            102
+10:29:47       . redhat-rhn-proxy-3.6-as-i386-3             96
+10:29:47       . rhn-tools-rhel-3-as-i386                 1545
+10:29:47       . redhat-rhn-proxy-4.0-as-i386-3            117
+10:29:47       . rhel-i386-as-3-extras                     153
+10:29:47       . redhat-rhn-proxy-3.7-as-i386-3            105
+10:29:47    rhel-i386-as-4:
+10:29:47       . redhat-rhn-proxy-5.1-as-i386-4             93
+10:29:47       . redhat-rhn-proxy-4.1-as-i386-4             92
+10:29:47       . rhel-i386-as-4-fastrack                   213
+10:29:47       . rhel-i386-as-4-extras                     222
+10:29:47       . redhat-rhn-proxy-4.0-as-i386-4            115
+10:29:47       . redhat-rhn-proxy-4.2-as-i386-4            101
+10:29:47       p redhat-rhn-proxy-5.0-as-i386-4            120
+10:29:47       . redhat-rhn-proxy-3.7-as-i386-4            105
+10:29:47       p rhn-tools-rhel-4-as-i386                 1274
+10:29:47    rhel-i386-client-5:
+10:29:47       . rhel-i386-client-workstation-fastrack-5    24
+10:29:47       . rhel-i386-client-vt-5                     129
+10:29:47       . rhn-tools-rhel-i386-client-5              371
+10:29:47       . rhel-i386-client-workstation-5           1496
+10:29:47       . rhel-i386-client-fastrack-5               147
+10:29:47       . rhel-i386-client-supplementary-5          173
+10:29:47    rhel-i386-desktop-3:
+10:29:47       . rhn-tools-rhel-3-desktop-i386            1448
+10:29:47       . rhel-i386-desktop-3-fastrack               55
+10:29:47       . rhel-i386-desktop-3-extras                130
+10:29:47    rhel-i386-es-3:
+10:29:47       . rhel-i386-es-3-extras                     153
+10:29:47       . rhn-tools-rhel-3-es-i386                 1545
+10:29:47       . rhel-i386-es-3-fastrack                    56
+10:29:47    rhel-i386-es-4:
+10:29:47       . rhn-tools-rhel-4-es-i386                 1274
+10:29:47       . rhel-i386-es-4-extras                     222
+10:29:47       . rhel-i386-es-4-fastrack                   213
+10:29:47    rhel-i386-server-5:
+10:29:47       . rhel-i386-server-supplementary-5          211
+10:29:47       . rhel-i386-server-cluster-storage-5        126
+10:29:47       p rhel-i386-server-vt-5                     129
+10:29:47       p rhn-tools-rhel-i386-server-5              371
+10:29:47       . rhel-i386-server-fastrack-5               170
+10:29:47       . rhel-i386-server-vt-5-beta                  0
+10:29:47       . rhel-i386-server-cluster-5                 81
+10:29:47    rhel-i386-ws-3:
+10:29:47       . rhn-tools-rhel-3-ws-i386                 1545
+10:29:47       . rhel-i386-ws-3-extras                     153
+10:29:47       . rhel-i386-ws-3-fastrack                    55
+10:29:47    rhel-i386-ws-4:
+10:29:47       . rhel-i386-ws-4-extras                     222
+10:29:47       . rhn-tools-rhel-4-ws-i386                 1274
+10:29:47       . rhel-i386-ws-4-fastrack                   209
+10:29:47    rhel-ia64-as-3:
+10:29:47       . rhel-ia64-as-3-extras                      95
+10:29:47       . rhn-tools-rhel-3-as-ia64                 1213
+10:29:47       . rhel-ia64-as-3-fastrack                    61
+10:29:47    rhel-ia64-as-4:
+10:29:47       . rhel-ia64-as-4-extras                      94
+10:29:47       . rhn-tools-rhel-4-as-ia64                 1214
+10:29:47       . rhel-ia64-as-4-fastrack                   234
+10:29:47    rhel-ia64-es-3:
+10:29:47       . rhel-ia64-es-3-extras                      95
+10:29:47       . rhn-tools-rhel-3-es-ia64                 1213
+10:29:47       . rhel-ia64-es-3-fastrack                    61
+10:29:47    rhel-ia64-es-4:
+10:29:47       . rhel-ia64-es-4-extras                      94
+10:29:47       . rhn-tools-rhel-4-es-ia64                 1214
+10:29:47       . rhel-ia64-es-4-fastrack                   234
+10:29:47    rhel-ia64-server-5:
+10:29:47       . rhel-ia64-server-cluster-storage-5        103
+10:29:47       . rhel-ia64-server-cluster-5                 81
+10:29:47       . rhel-ia64-server-vt-5                     128
+10:29:47       . rhel-ia64-server-vt-5-beta                  0
+10:29:47       . rhel-ia64-server-fastrack-5               170
+10:29:47       . rhel-ia64-server-supplementary-5           65
+10:29:47       . rhn-tools-rhel-ia64-server-5              371
+10:29:47    rhel-ia64-ws-3:
+10:29:47       . rhel-ia64-ws-3-fastrack                    60
+10:29:47       . rhel-ia64-ws-3-extras                      95
+10:29:47       . rhn-tools-rhel-3-ws-ia64                 1213
+10:29:47    rhel-ia64-ws-4:
+10:29:48       . rhel-ia64-ws-4-fastrack                   231
+10:29:48       . rhel-ia64-ws-4-extras                      94
+10:29:48       . rhn-tools-rhel-4-ws-ia64                 1214
+10:29:48    rhel-ppc-as-3:
+10:29:48       . rhel-ppc-as-3-fastrack                     61
+10:29:48       . rhel-ppc-as-3-extras                       75
+10:29:48    rhel-ppc-as-4:
+10:29:48       . rhn-tools-rhel-4-as-ppc                     0
+10:29:48       . rhel-ppc-as-4-extras                       96
+10:29:48       . rhel-ppc-as-4-fastrack                    234
+10:29:48    rhel-ppc-server-5:
+10:29:48       . rhel-ppc-server-cluster-5                  32
+10:29:48       . rhel-ppc-server-supplementary-5           114
+10:29:48       . rhel-ppc-server-fastrack-5                197
+10:29:48       . rhn-tools-rhel-ppc-server-5                15
+10:29:48       . rhel-ppc-server-cluster-storage-5          31
+10:29:48    rhel-x86_64-as-3:
+10:29:48       . rhn-tools-rhel-3-as-x86_64               1424
+10:29:48       . rhel-x86_64-as-3-extras                    85
+10:29:48       . rhel-x86_64-as-3-fastrack                  60
+10:29:48    rhel-x86_64-as-4:
+10:29:48       . rhel-x86_64-as-4-fastrack                 237
+10:29:48       . rhn-tools-rhel-4-as-x86_64               1274
+10:29:48       . rhel-x86_64-as-4-extras                   163
+10:29:48       . redhat-rhn-proxy-5.1-as-x86_64-4           93
+10:29:48    rhel-x86_64-client-5:
+10:29:48       . rhel-x86_64-client-supplementary-5        218
+10:29:48       . rhel-x86_64-client-workstation-fastrack-5   41
+10:29:48       . rhel-x86_64-client-workstation-5         2236
+10:29:48       . rhel-x86_64-client-vt-5                   144
+10:29:48       . rhel-x86_64-client-fastrack-5             161
+10:29:48       . rhn-tools-rhel-x86_64-client-5            371
+10:29:48    rhel-x86_64-desktop-3:
+10:29:48       . rhn-tools-rhel-3-desktop-x86_64          1401
+10:29:48       . rhel-x86_64-desktop-3-extras               62
+10:29:48       . rhel-x86_64-desktop-3-fastrack             59
+10:29:48    rhel-x86_64-es-3:
+10:29:48       . rhel-x86_64-es-3-fastrack                  60
+10:29:48       . rhn-tools-rhel-3-es-x86_64               1424
+10:29:48       . rhel-x86_64-es-3-extras                    85
+10:29:48    rhel-x86_64-es-4:
+10:29:48       . rhel-x86_64-es-4-extras                   163
+10:29:48       . rhel-x86_64-es-4-fastrack                 237
+10:29:48       . rhn-tools-rhel-4-es-x86_64               1274
+10:29:48    rhel-x86_64-server-5:
+10:29:48       . rhel-x86_64-server-fastrack-5             201
+10:29:48       . rhel-x86_64-server-cluster-5               81
+10:29:48       . rhel-x86_64-server-vt-5                   144
+10:29:48       . rhel-x86_64-server-vt-5-beta                0
+10:29:48       . rhn-tools-rhel-x86_64-server-5            371
+10:29:48       . rhel-x86_64-server-supplementary-5        266
+10:29:48       . rhel-x86_64-server-cluster-storage-5      103
+10:29:48    rhel-x86_64-ws-3:
+10:29:48       . rhel-x86_64-ws-3-extras                    85
+10:29:48       . rhn-tools-rhel-3-ws-x86_64               1424
+10:29:48       . rhel-x86_64-ws-3-fastrack                  59
+10:29:48    rhel-x86_64-ws-4:
+10:29:48       . rhn-tools-rhel-4-ws-x86_64               1274
+10:29:48       . rhel-x86_64-ws-4-fastrack                 233
+10:29:48       . rhel-x86_64-ws-4-extras                   163
+10:29:48    severn-beta2-i386:
+10:29:48       . severn-beta2-i386-updates                1878
+10:29:48    solaris-sparc-9:
+10:29:48       . solaris-sparc-9-rhcmsys-7.3                 0
+10:29:48       . solaris-sparc-9-rhcmsys-7.1                 0
+10:29:48       . solaris-sparc-9-rhdirserv-7.1               0
+10:29:48       . solaris-sparc-9-rhdirserv-8                 0
+10:29:48       . solaris-sparc-9-rhcmsys-7.2                 0
+10:29:48
+    Import complete:
+        Begin time: Tue May 13 10:28:05 2008
+        End time:   Tue May 13 10:29:48 2008
+        Elapsed:    0 hours, 1 minutes, 42 seconds
+
+09:47:13 Red Hat Network Satellite - live synchronization
+09:47:13    url: https://satellite.rhn.stage.redhat.com
+09:47:13    debug/output level: 1
+09:47:13    db:  rhnsat/<password>@rhnsat
+09:47:13
+09:47:13 Retrieving / parsing channel-families data
+09:47:14 channel-families data complete
+Pushing scout configs to all monitoring scouts
+09:47:19
+09:47:19 Retrieving / parsing channel data
+09:48:34    p = previously imported/synced channel
+09:48:34    . = channel not yet imported/synced
+09:48:34    base-channels:
+09:48:34       . redhat-advanced-server-i386              3734
+09:48:34       . redhat-ent-linux-i386-es-2.1             3225
+09:48:34       . redhat-ent-linux-i386-ws-2.1             3213
+09:48:34       . redhat-linux-alpha-6.2                   1184
+09:48:34       . redhat-linux-alpha-7.0                   1412
+09:48:34       . redhat-linux-alpha-7.1                   1487
+09:48:34       . redhat-linux-as-2.1-IPF                  3184
+09:48:34       . redhat-linux-aw-2.1-IPF                  3169
+09:48:34       . redhat-linux-ee-i386-6.2                   13
+09:48:34       . redhat-linux-i386-6.2                    1357
+09:48:34       . redhat-linux-i386-7.0                    1615
+09:48:35       . redhat-linux-i386-7.1                    2046
+09:48:35       . redhat-linux-i386-7.2                    2338
+09:48:35       . redhat-linux-i386-7.3                    2481
+09:48:35       . redhat-linux-i386-8.0                    2316
+09:48:35       . redhat-linux-i386-9                      1864
+09:48:35       . redhat-linux-iSeries-7.1                 1135
+09:48:35       . redhat-linux-ia64-7.1                    1392
+09:48:35       . redhat-linux-ia64-7.2                    1886
+09:48:35       . redhat-linux-pSeries-7.1                 1135
+09:48:35       . redhat-linux-s390-7.2                    1447
+09:48:35       . redhat-linux-s390x-7.1                    977
+09:48:35       . redhat-linux-severn-i386-9.0.93          1455
+09:48:35       . redhat-linux-sparc-6.2                   1201
+09:48:35       . rh-i386-desktop-4                        5372
+09:48:35       . rh-x86_64-desktop-4                      6147
+09:48:36       . rhel-i386-as-3                           4954
+09:48:36       p rhel-i386-as-4                           5414
+09:48:36       . rhel-i386-client-5                       3256
+09:48:36       . rhel-i386-desktop-3                      4299
+09:48:36       . rhel-i386-es-3                           4973
+09:48:36       . rhel-i386-es-4                           5414
+09:48:37       p rhel-i386-server-5                       4042
+09:48:37       . rhel-i386-ws-3                           4900
+09:48:37       . rhel-i386-ws-4                           5372
+09:48:37       . rhel-ia64-as-3                           5187
+09:48:37       . rhel-ia64-as-4                           5685
+09:48:37       . rhel-ia64-es-3                           4723
+09:48:38       . rhel-ia64-es-4                           5684
+09:48:38       . rhel-ia64-server-5                       4147
+09:48:38       . rhel-ia64-ws-3                           5137
+09:48:38       . rhel-ia64-ws-4                           5646
+09:48:38       . rhel-ppc-as-3                            5289
+09:48:38       . rhel-ppc-as-4                            6075
+09:48:39       . rhel-ppc-server-5                        5248
+09:48:39       . rhel-x86_64-as-3                         5452
+09:48:39       . rhel-x86_64-as-4                         6189
+09:48:39       . rhel-x86_64-client-5                     3831
+09:48:39       . rhel-x86_64-desktop-3                    4819
+09:48:40       . rhel-x86_64-es-3                         4956
+09:48:40       . rhel-x86_64-es-4                         6189
+09:48:40       . rhel-x86_64-server-5                     5305
+09:48:40       . rhel-x86_64-ws-3                         5397
+09:48:40       . rhel-x86_64-ws-4                         6147
+09:48:40       . severn-beta2-i386                        1466
+09:48:40       . solaris-sparc-9                             0
+09:48:40    redhat-advanced-server-i386:
+09:48:40       . rhn-tools-rhel-2.1-as-i386               1524
+09:48:40       . redhat-rhn-proxy-3.6-as-i386-2.1           17
+09:48:40       . redhat-rhn-proxy-3.7-as-i386-2.1           11
+09:48:40       . redhat-rhn-proxy-3.2-as-i386-2.1           26
+09:48:40       . redhat-rhn-proxy-as-i386-2.1               33
+09:48:40    redhat-ent-linux-i386-es-2.1:
+09:48:40       . rhn-tools-rhel-2.1-es-i386               1524
+09:48:40    redhat-ent-linux-i386-ws-2.1:
+09:48:40       . rhn-tools-rhel-2.1-ws-i386               1524
+09:48:40    redhat-linux-alpha-6.2:
+09:48:40       . redhat-powertools-alpha-6.2               532
+09:48:40    redhat-linux-alpha-7.0:
+09:48:40       . redhat-powertools-alpha-7.0               461
+09:48:40    redhat-linux-alpha-7.1:
+09:48:40       . redhat-powertools-alpha-7.1               459
+09:48:40    redhat-linux-as-2.1-IPF:
+09:48:40       . rhn-tools-rhel-2.1-as-ia64               1192
+09:48:40    redhat-linux-aw-2.1-IPF:
+09:48:40       . rhn-tools-rhel-2.1-aw-ia64               1192
+09:48:40    redhat-linux-i386-6.2:
+09:48:41       . redhat-powertools-i386-6.2                584
+09:48:41    redhat-linux-i386-7.0:
+09:48:41       . redhat-powertools-i386-7.0                520
+09:48:41    redhat-linux-i386-7.1:
+09:48:41       . redhat-powertools-i386-7.1                541
+09:48:41    redhat-linux-i386-7.2:
+09:48:41       . redhat-rhn-proxy-i386-7.2                  48
+09:48:41       . k12ltsp-i386-7.2                           63
+09:48:41    redhat-linux-i386-7.3:
+09:48:41       . redhat-gcc3.1-i386-7.3                     12
+09:48:41       . education-k12ltsp-i386-7.3                 82
+09:48:41       . education-general-i386-7.3                  7
+09:48:41    redhat-linux-i386-8.0:
+09:48:41       . education-k12ltsp-i386-8.0                122
+09:48:41    redhat-linux-i386-9:
+09:48:41       . rhn-tools-redhat-linux-i386-9            1514
+09:48:41       . education-k12ltsp-i386-9                  123
+09:48:41    redhat-linux-severn-i386-9.0.93:
+09:48:41       . redhat-linux-severn-i386-9.0.93-updates  2388
+09:48:41    redhat-linux-sparc-6.2:
+09:48:41       . redhat-powertools-sparc-6.2               480
+09:48:41    rh-i386-desktop-4:
+09:48:41       . rh-i386-desktop-4-extras                  222
+09:48:41       . rh-i386-desktop-4-fastrack                209
+09:48:41       . rhn-tools-rhel-4-desktop-i386            1274
+09:48:41    rh-x86_64-desktop-4:
+09:48:41       . rhn-tools-rhel-4-desktop-x86_64          1274
+09:48:41       . rh-x86_64-desktop-4-extras                163
+09:48:41       . rh-x86_64-desktop-4-fastrack              233
+09:48:41    rhel-i386-as-3:
+09:48:41       . redhat-rhn-proxy-4.1-as-i386-3             94
+09:48:41       . rhel-i386-as-3-fastrack                    56
+09:48:41       . redhat-rhn-proxy-4.2-as-i386-3            102
+09:48:41       . redhat-rhn-proxy-3.6-as-i386-3             96
+09:48:41       . rhn-tools-rhel-3-as-i386                 1545
+09:48:41       . redhat-rhn-proxy-4.0-as-i386-3            117
+09:48:41       . rhel-i386-as-3-extras                     153
+09:48:41       . redhat-rhn-proxy-3.7-as-i386-3            105
+09:48:41    rhel-i386-as-4:
+09:48:41       . redhat-rhn-proxy-5.1-as-i386-4             93
+09:48:41       . redhat-rhn-proxy-4.1-as-i386-4             92
+09:48:41       . rhel-i386-as-4-fastrack                   213
+09:48:41       . rhel-i386-as-4-extras                     222
+09:48:41       . redhat-rhn-proxy-4.0-as-i386-4            115
+09:48:41       . redhat-rhn-proxy-4.2-as-i386-4            101
+09:48:41       p redhat-rhn-proxy-5.0-as-i386-4            120
+09:48:41       . redhat-rhn-proxy-3.7-as-i386-4            105
+09:48:41       p rhn-tools-rhel-4-as-i386                 1274
+09:48:41    rhel-i386-client-5:
+09:48:41       . rhel-i386-client-workstation-fastrack-5    24
+09:48:41       . rhel-i386-client-vt-5                     129
+09:48:41       . rhn-tools-rhel-i386-client-5              371
+09:48:41       . rhel-i386-client-workstation-5           1496
+09:48:41       . rhel-i386-client-fastrack-5               147
+09:48:41       . rhel-i386-client-supplementary-5          173
+09:48:41    rhel-i386-desktop-3:
+09:48:41       . rhn-tools-rhel-3-desktop-i386            1448
+09:48:41       . rhel-i386-desktop-3-fastrack               55
+09:48:41       . rhel-i386-desktop-3-extras                130
+09:48:41    rhel-i386-es-3:
+09:48:41       . rhel-i386-es-3-extras                     153
+09:48:41       . rhn-tools-rhel-3-es-i386                 1545
+09:48:41       . rhel-i386-es-3-fastrack                    56
+09:48:41    rhel-i386-es-4:
+09:48:41       . rhn-tools-rhel-4-es-i386                 1274
+09:48:41       . rhel-i386-es-4-extras                     222
+09:48:41       . rhel-i386-es-4-fastrack                   213
+09:48:41    rhel-i386-server-5:
+09:48:41       . rhel-i386-server-supplementary-5          211
+09:48:41       . rhel-i386-server-cluster-storage-5        126
+09:48:41       p rhel-i386-server-vt-5                     129
+09:48:41       p rhn-tools-rhel-i386-server-5              371
+09:48:41       . rhel-i386-server-fastrack-5               170
+09:48:41       . rhel-i386-server-vt-5-beta                  0
+09:48:41       . rhel-i386-server-cluster-5                 81
+09:48:41    rhel-i386-ws-3:
+09:48:41       . rhn-tools-rhel-3-ws-i386                 1545
+09:48:41       . rhel-i386-ws-3-extras                     153
+09:48:41       . rhel-i386-ws-3-fastrack                    55
+09:48:41    rhel-i386-ws-4:
+09:48:41       . rhel-i386-ws-4-extras                     222
+09:48:41       . rhn-tools-rhel-4-ws-i386                 1274
+09:48:41       . rhel-i386-ws-4-fastrack                   209
+09:48:41    rhel-ia64-as-3:
+09:48:41       . rhel-ia64-as-3-extras                      95
+09:48:41       . rhn-tools-rhel-3-as-ia64                 1213
+09:48:41       . rhel-ia64-as-3-fastrack                    61
+09:48:41    rhel-ia64-as-4:
+09:48:41       . rhel-ia64-as-4-extras                      94
+09:48:41       . rhn-tools-rhel-4-as-ia64                 1214
+09:48:41       . rhel-ia64-as-4-fastrack                   234
+09:48:41    rhel-ia64-es-3:
+09:48:41       . rhel-ia64-es-3-extras                      95
+09:48:41       . rhn-tools-rhel-3-es-ia64                 1213
+09:48:41       . rhel-ia64-es-3-fastrack                    61
+09:48:41    rhel-ia64-es-4:
+09:48:41       . rhel-ia64-es-4-extras                      94
+09:48:41       . rhn-tools-rhel-4-es-ia64                 1214
+09:48:41       . rhel-ia64-es-4-fastrack                   234
+09:48:41    rhel-ia64-server-5:
+09:48:41       . rhel-ia64-server-cluster-storage-5        103
+09:48:41       . rhel-ia64-server-cluster-5                 81
+09:48:41       . rhel-ia64-server-vt-5                     128
+09:48:41       . rhel-ia64-server-vt-5-beta                  0
+09:48:41       . rhel-ia64-server-fastrack-5               170
+09:48:41       . rhel-ia64-server-supplementary-5           65
+09:48:41       . rhn-tools-rhel-ia64-server-5              371
+09:48:41    rhel-ia64-ws-3:
+09:48:41       . rhel-ia64-ws-3-fastrack                    60
+09:48:41       . rhel-ia64-ws-3-extras                      95
+09:48:41       . rhn-tools-rhel-3-ws-ia64                 1213
+09:48:41    rhel-ia64-ws-4:
+09:48:41       . rhel-ia64-ws-4-fastrack                   231
+09:48:41       . rhel-ia64-ws-4-extras                      94
+09:48:41       . rhn-tools-rhel-4-ws-ia64                 1214
+09:48:41    rhel-ppc-as-3:
+09:48:41       . rhel-ppc-as-3-fastrack                     61
+09:48:41       . rhel-ppc-as-3-extras                       75
+09:48:41    rhel-ppc-as-4:
+09:48:41       . rhn-tools-rhel-4-as-ppc                     0
+09:48:41       . rhel-ppc-as-4-extras                       96
+09:48:41       . rhel-ppc-as-4-fastrack                    234
+09:48:41    rhel-ppc-server-5:
+09:48:41       . rhel-ppc-server-cluster-5                  32
+09:48:41       . rhel-ppc-server-supplementary-5           114
+09:48:41       . rhel-ppc-server-fastrack-5                197
+09:48:41       . rhn-tools-rhel-ppc-server-5                15
+09:48:41       . rhel-ppc-server-cluster-storage-5          31
+09:48:41    rhel-x86_64-as-3:
+09:48:41       . rhn-tools-rhel-3-as-x86_64               1424
+09:48:41       . rhel-x86_64-as-3-extras                    85
+09:48:41       . rhel-x86_64-as-3-fastrack                  60
+09:48:41    rhel-x86_64-as-4:
+09:48:41       . rhel-x86_64-as-4-fastrack                 237
+09:48:41       . rhn-tools-rhel-4-as-x86_64               1274
+09:48:41       . rhel-x86_64-as-4-extras                   163
+09:48:41       . redhat-rhn-proxy-5.1-as-x86_64-4           93
+09:48:41    rhel-x86_64-client-5:
+09:48:41       . rhel-x86_64-client-supplementary-5        218
+09:48:41       . rhel-x86_64-client-workstation-fastrack-5   41
+09:48:41       . rhel-x86_64-client-workstation-5         2236
+09:48:41       . rhel-x86_64-client-vt-5                   144
+09:48:41       . rhel-x86_64-client-fastrack-5             161
+09:48:41       . rhn-tools-rhel-x86_64-client-5            371
+09:48:41    rhel-x86_64-desktop-3:
+09:48:41       . rhn-tools-rhel-3-desktop-x86_64          1401
+09:48:41       . rhel-x86_64-desktop-3-extras               62
+09:48:41       . rhel-x86_64-desktop-3-fastrack             59
+09:48:41    rhel-x86_64-es-3:
+09:48:41       . rhel-x86_64-es-3-fastrack                  60
+09:48:41       . rhn-tools-rhel-3-es-x86_64               1424
+09:48:41       . rhel-x86_64-es-3-extras                    85
+09:48:41    rhel-x86_64-es-4:
+09:48:41       . rhel-x86_64-es-4-extras                   163
+09:48:41       . rhel-x86_64-es-4-fastrack                 237
+09:48:41       . rhn-tools-rhel-4-es-x86_64               1274
+09:48:41    rhel-x86_64-server-5:
+09:48:41       . rhel-x86_64-server-fastrack-5             201
+09:48:41       . rhel-x86_64-server-cluster-5               81
+09:48:41       . rhel-x86_64-server-vt-5                   144
+09:48:41       . rhel-x86_64-server-vt-5-beta                0
+09:48:41       . rhn-tools-rhel-x86_64-server-5            371
+09:48:41       . rhel-x86_64-server-supplementary-5        266
+09:48:41       . rhel-x86_64-server-cluster-storage-5      103
+09:48:41    rhel-x86_64-ws-3:
+09:48:41       . rhel-x86_64-ws-3-extras                    85
+09:48:41       . rhn-tools-rhel-3-ws-x86_64               1424
+09:48:41       . rhel-x86_64-ws-3-fastrack                  59
+09:48:41    rhel-x86_64-ws-4:
+09:48:41       . rhn-tools-rhel-4-ws-x86_64               1274
+09:48:41       . rhel-x86_64-ws-4-fastrack                 233
+09:48:41       . rhel-x86_64-ws-4-extras                   163
+09:48:41    severn-beta2-i386:
+09:48:41       . severn-beta2-i386-updates                1878
+09:48:41    solaris-sparc-9:
+09:48:41       . solaris-sparc-9-rhcmsys-7.3                 0
+09:48:41       . solaris-sparc-9-rhcmsys-7.1                 0
+09:48:41       . solaris-sparc-9-rhdirserv-7.1               0
+09:48:41       . solaris-sparc-9-rhdirserv-8                 0
+09:48:41       . solaris-sparc-9-rhcmsys-7.2                 0
+09:48:41

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project name="MY_RHTS" default="makejar_rhn" basedir="../..">
+
+  <taskdef name="testng" classname="com.beust.testng.TestNGAntTask" classpath="${basedir}/lib/testng-5.8-jdk15.jar"/>
+
+  <property name="junit.reports" value="${basedir}/junit_reports"/>
+  <property name="testng.reports" value="${basedir}/testng-reports"/>
+  <property name="testng.suites" value="${basedir}/cl-runner/testng-suites"/>
+  <property file="${basedir}/localhost-settings.properties"/>
+
+  <path id="classpath.jars">
+	<fileset dir="${basedir}/lib">
+		<include name="**/*.jar"/>
+	</fileset>  	
+  </path>
+
+	<target name="cleanup_junitreports">
+		<delete dir="${junit.reports}" includeEmptyDirs="true"/>
+		<mkdir dir="${junit.reports}"/>
+	</target>
+	
+	<target name="cleanup_testngreports">
+		<delete dir="${testng.reports}" includeEmptyDirs="true"/>
+		<mkdir dir="${testng.reports}"/>
+	</target>
+	
+	<target name="makejar_rhn" depends="compile_rhn">
+		<jar destfile="${basedir}/lib/redhat-rhn.jar">
+			<fileset dir="${basedir}/bin" includes="**/*.class"/>
+		</jar>
+	</target>
+	<target name="compile_rhn">
+		<delete dir="${basedir}/bin/" includeEmptyDirs="true"/>
+		<mkdir dir="${basedir}/bin/"/>
+		<javac srcdir="${basedir}/src/main/java/" debug="on" debuglevel="lines,vars,source" destdir="${basedir}/bin/">
+			<classpath refid="classpath.jars"/>
+		</javac>
+		<javac srcdir="${basedir}/src/test/java/" debug="on" debuglevel="lines,vars,source" destdir="${basedir}/bin/">
+			<classpath refid="classpath.jars"/>
+		</javac>
+	</target>
+	<target name="jtest" depends="cleanup_junitreports, makejar_rhn">
+		<junit fork="yes" printsummary="yes" haltonfailure="no">
+			<!--		<test name="com.redhat.rhn.harness.Space01.Monitoring" todir="${junit.reports}"/> -->
+			<!--		<test name="com.redhat.rhn.harness.Space01.ActivationKeys" todir="${junit.reports}"/> -->
+			<!--		<test name="com.redhat.rhn.harness.Space01.Authentication" todir="${junit.reports}"/> -->
+			<!--		<test name="com.redhat.rhn.harness.Space01.MultiArchitecture" todir="${junit.reports}"/> -->
+			<test name="mytest.YourRHN" todir="${junit.reports}"/>
+			<formatter type="xml"/>
+			<classpath refid="classpath.jars"/>
+		</junit>
+		
+		<junitreport todir="${junit.reports}">
+			<fileset dir="${junit.reports}">
+				<include name="*.xml"/>
+			</fileset>
+			<report todir="${junit.reports}"/>
+		</junitreport>
+	</target>
+	
+	<target name="run-testng" depends="cleanup_testngreports, makejar_rhn">
+		<testng
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-rhns-goldsuite.xml"/>
+		</testng>
+	</target>
+
+  	<target name="run-sat531-regression-all">
+		<testng 
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1566.xml"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1597.xml"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1661.xml"/>
+		</testng>
+  	</target>
+	
+	<target name="run-sat531-errata_RHBA-2009:1566">
+		<testng 
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1566.xml"/>
+		</testng>
+	</target>
+	
+	<target name="run-sat531-errata_RHBA-2009:1597">
+		<testng 
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1597.xml"/>
+		</testng>
+	</target>
+	
+	<target name="run-sat531-errata_RHBA-2009:1661">
+		<testng 
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-sat531-errata-RHBA-2009:1661.xml"/>
+		</testng>
+	</target>
+
+	<target name="run-mysingletest">
+		<testng 
+			haltonfailure="false" haltonskipped="false"
+			listeners="com.redhat.qe.auto.selenium.TestNGListener"
+			outputdir="${testng.reports}"
+			useDefaultListeners="true">
+			<classpath refid="classpath.jars"/>
+			<xmlfileset dir = "${testng.suites}" includes= "testng-mysingletest.xml"/>
+		</testng>
+	</target>
+	
+
+</project>

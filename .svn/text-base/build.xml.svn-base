@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project name="BVT01" default="all" basedir=".">
+  <property file="${basedir}/localhost-settings.properties"/>
+ 
+	 <path id="classpath.test">
+	    <pathelement location="lib/activation-1.1.jar" />
+	 	<pathelement location="lib/junit-3.8.1.jar" />
+	 	<pathelement location="lib/log4j-1.2.13.jar" />
+	 	<pathelement location="lib/mail-1.4.jar" />
+	 	<pathelement location="lib/testng-5.8-jdk15.jar" />
+	 	<pathelement location="src/main/java" />
+	 	<pathelement location="src/../../webui-framework/src" />
+	 	<pathelement location="src/../../webui-framework/lib/selenium-java-client-driver.jar" />
+	 	<pathelement location="src/../../webui-framework/lib/commons-httpclient-3.1.jar" />
+	 	<pathelement location="src/../../webui-framework/lib/not-yet-commons-ssl-0.3.10.jar" />
+	 	<pathelement location="src/../../webui-framework/lib/commons-logging.jar" />
+	 	<pathelement location="src/../../webui-framework/lib/commons-codec-1.3.jar" />
+	 	<pathelement location="src/../../webui-framework/lib/trilead-ssh2-build213.jar" />
+	 	<pathelement location="src/test/java" />
+	 	<pathelement location="lib/commons-logging-1.1.jar" />
+	 	<pathelement location="lib/ws-commons-util-1.0.2.jar" />
+	 	<pathelement location="lib/xmlrpc-client-3.1.jar" />
+	 	<pathelement location="lib/xmlrpc-common-3.1.jar" />
+	 	<pathelement location="lib/reportng-0.9.8.jar" />
+	 	<pathelement location="lib/velocity-dep-1.4.jar" />
+	 	<pathelement location="lib/json-lib-2.2.1-jdk13.jar" />
+	 	<pathelement location="lib/jyaml-1.3.jar" />
+	  </path>
+	
+
+ <target name="all" depends="clean" >
+    <antcall target="run-selenium-tests"/>
+    <antcall target="stop-server"/>
+  </target>
+
+  <target name="clean">
+  </target>
+
+  <property name="report.dir" value="report"/>
+	
+  <property name="newreport.dir" value="report/new"/>
+  
+  <property name="test.lib.dir"
+                value="${basedir}/lib" />
+  <property name="firefox" value="*chrome" />
+	
+  <property name="user.dir"
+		                value="${user.dir}" />
+  <property name="hudson.rhn.host"
+			                value="${hudson.rhn.host}" />
+  <property name="hudson.rhn.user"
+				                value="${hudson.rhn.user}" />
+  <property name="hudson.rhn.pass"
+				                value="${hudson.rhn.pass}" />
+  <property name="hudson.rhn.system01"
+					                value="${hudson.rhn.system01}" />
+  <property name="hudson.rhn.system02"
+						                value="${hudson.rhn.system02}" />
+  
+  <property name="hudson.selenium.port"
+							                value="${hudson.selenium.port}" />	
+  <property name="hudson.sat.version"
+								                value="${hudson.sat.version}" />	
+  <property name="hudson.test.name"
+									                value="${hudson.test.name}" />	
+  <property name="hudson.testopia.testrun.testplan"
+										                value="${hudson.test.name}" />	
+	
+  <property name="acceptance.test.list.dir"
+                value="/src/test/java/com/redhat/rhn/harness/satellite51" />
+  <property name="acceptance.test.report.dir"
+                value="${functional.test.dir}" />
+
+  
+  <property name="testng.jar" value="lib/testng-5.8-jdk15.jar" />
+
+
+
+  <target name="run-selenium-tests">
+    <mkdir dir="${reports.dir}" />
+    <java jar="${test.lib.dir}/selenium-server.jar"
+            fork="true">
+    </java>
+  </target>
+
+	
+	 <target name="webui-compile-test">
+			 	<javac srcdir="${basedir}/../webui-framework/src/" debug="on" debuglevel="lines,vars,source">
+			 		<classpath refid="classpath.test"/>
+			 		
+			 	 </javac>
+		 </target>
+		 
+
+	 <target name="compile-test" depends="webui-compile-test">
+	 	<javac srcdir="${basedir}/src/main/java" debug="on" debuglevel="lines,vars,source">
+	 		<classpath refid="classpath.test"/>
+	 	 </javac>
+	    <javac srcdir="${basedir}/src/test/java/com/redhat/rhn/harness/" debug="on" debuglevel="lines,vars,source">
+	      <classpath refid="classpath.test"/>
+	    </javac>
+	  </target>
+	
+	
+	  <target name="clean-compile-test">
+	    <delete>
+	      <fileset dir="${basedir}/src/test/java/com/redhat/rhn/harness/" includes="**/*.class" />
+	    </delete>
+	  </target>
+
+	  <target name="test" depends="compile-test">
+	  	<echoproperties/>
+	  	<echo message="user.dir = ${user.dir}" />
+	  	<echo message="hudosn.rhn.host = ${hudson.rhn.host}" />
+	  	<echo message="hudson.rhn.user = ${hudson.rhn.user}" />
+	  	<echo message="hudson.rhn.pass = ${hudson.rhn.pass}" />
+	  	<echo message="hudson.rhn.system01 = ${hudson.rhn.system01}" />
+	  	<echo message="hudson.rhn.system02 = ${hudson.rhn.system02}" />
+	  	<echo message="hudson.selenium.port = ${hudson.selenium.port}" />
+	  	<echo message="hudson.sat.version = ${hudson.sat.version}" />
+	  
+	   <delete dir="${report.dir}" />
+           <mkdir dir="${report.dir}" />
+
+            <junit>
+              <formatter type="xml" />
+	      <classpath refid="classpath.test" />
+	      <formatter type="brief" usefile="false" />
+	      <test name="com.redhat.rhn.harness.satellite51.SuiteSniff01" todir="${report.dir}"/>
+              	<syspropertyset>
+              		<propertyref builtin="all"/>
+              	</syspropertyset>
+	    </junit>
+	  </target>
+
+	<taskdef resource="testngtasks" classpath="lib/testng-5.8-jdk15.jar">
+	</taskdef>
+	
+	<target name="reports">
+		<junitreport todir="${newreport.dir}">
+			<fileset dir="${report.dir}">
+				<include name="*/*.xml"/>
+			</fileset>
+			<report format="noframes" todir="${newreport.dir}"/>
+		</junitreport>
+	</target>
+	
+	
+	
+	
+	
+	<target name="testng-sniff" depends="compile-test">
+						 	   <echoproperties/>
+						 	   <echo message="user.dir = ${user.dir}" />
+						 	   <echo message="hudosn.rhn.host = ${hudson.rhn.host}" />
+						 	   <echo message="hudson.rhn.user = ${hudson.rhn.user}" />
+						 	   <echo message="hudson.rhn.pass = ${hudson.rhn.pass}" />
+						 	   <echo message="hudson.rhn.system01 = ${hudson.rhn.system01}" />
+						 	   <echo message="hudson.rhn.system02 = ${hudson.rhn.system02}" />	  
+						 	   <echo message="hudson.selenium.port = ${hudson.selenium.port}" />
+							   <echo message="hudson.sat.version = ${hudson.sat.version}" />
+					           <delete dir="${newreport.dir}" />
+							   <delete dir="${report.dir}" />
+						       <mkdir dir="${report.dir}" />
+							   <mkdir dir="${newreport.dir}" />
+					
+					
+					
+					<testng classpathref="classpath.test" 
+						outputdir="${report.dir}"
+						verbose="2"
+						sourcedir="src/test/java/com/redhat/rhn/harness/Space01"
+						haltonfailure="false"
+						reporter="org.testng.reporters.JUnitXMLReporter"
+						listeners="com.redhat.qe.auto.selenium.TestNGListener">
+						
+						<xmlfileset dir="src/test/java/com/redhat/rhn/harness/Space01/testng-tests" includes="sniff.xml"/>
+						
+						<sysproperty key="user.dir" value="${user.dir}"/>
+						<sysproperty key="hudson.rhn.host" value="${hudson.rhn.host}"/>
+						<sysproperty key="hudson.rhn.user" value="${hudson.rhn.user}"/>
+						<sysproperty key="hudson.rhn.pass" value="${hudson.rhn.pass}"/>
+						<sysproperty key="hudson.rhn.system01" value="${hudson.rhn.system01}"/>
+						<sysproperty key="hudson.rhn.system02" value="${hudson.rhn.system02}"/>
+						<sysproperty key="hudson.selenium.port" value="${hudson.selenium.port}"/>
+						<sysproperty key="hudson.sat.version" value="${hudson.sat.version}"/>					
+						</testng>
+	 </target>
+	
+	<target name="testall" depends="compile-test">
+							 	   <echoproperties/>
+							 	   <echo message="user.dir = ${user.dir}" />
+							 	   <echo message="hudosn.rhn.host = ${hudson.rhn.host}" />
+							 	   <echo message="hudson.rhn.user = ${hudson.rhn.user}" />
+							 	   <echo message="hudson.rhn.pass = ${hudson.rhn.pass}" />
+							 	   <echo message="hudson.rhn.system01 = ${hudson.rhn.system01}" />
+							 	   <echo message="hudson.rhn.system02 = ${hudson.rhn.system02}" />	  
+							 	   <echo message="hudson.selenium.port = ${hudson.selenium.port}" />
+								   <echo message="hudson.sat.version = ${hudson.sat.version}" />
+						           <delete dir="${newreport.dir}" />
+								   <delete dir="${report.dir}" />
+							       <mkdir dir="${report.dir}" />
+								   <mkdir dir="${newreport.dir}" />
+						
+						
+						
+						<testng classpathref="classpath.test" 
+							outputdir="${report.dir}"
+							verbose="2"
+							sourcedir="src/test/java/com/redhat/rhn/harness/Space01"
+							haltonfailure="false"
+							reporter="org.testng.reporters.JUnitXMLReporter"
+							listeners="com.redhat.qe.auto.selenium.TestNGListener">
+							
+							<xmlfileset dir="src/test/java/com/redhat/rhn/harness/Space01/testng-tests" includes="testall.xml"/>
+							
+							<sysproperty key="user.dir" value="${user.dir}"/>
+							<sysproperty key="hudson.rhn.host" value="${hudson.rhn.host}"/>
+							<sysproperty key="hudson.rhn.user" value="${hudson.rhn.user}"/>
+							<sysproperty key="hudson.rhn.pass" value="${hudson.rhn.pass}"/>
+							<sysproperty key="hudson.rhn.system01" value="${hudson.rhn.system01}"/>
+							<sysproperty key="hudson.rhn.system02" value="${hudson.rhn.system02}"/>
+							<sysproperty key="hudson.selenium.port" value="${hudson.selenium.port}"/>
+							<sysproperty key="hudson.sat.version" value="${hudson.sat.version}"/>					
+							</testng>
+		 </target>
+		
+
+	
+	
+	
+	<target name="anytest" depends="compile-test">
+						   
+					 	   <echoproperties/>
+					 	   <echo message="user.dir = ${user.dir}" />
+					 	   <echo message="hudosn.rhn.host = ${hudson.rhn.host}" />
+					 	   <echo message="hudson.rhn.user = ${hudson.rhn.user}" />
+					 	   <echo message="hudson.rhn.pass = ${hudson.rhn.pass}" />
+					 	   <echo message="hudson.rhn.system01 = ${hudson.rhn.system01}" />
+					 	   <echo message="hudson.rhn.system02 = ${hudson.rhn.system02}" />	  
+					 	   <echo message="hudson.selenium.port = ${hudson.selenium.port}" />
+						   <echo message="hudson.sat.version = ${hudson.sat.version}" />
+						   <echo message="hudson.testopia.testrun.testplan = ${hudson.test.name}" />
+				           <delete dir="${newreport.dir}" />
+						   <delete dir="${report.dir}" />
+					       <mkdir dir="${report.dir}" />
+						   <mkdir dir="${newreport.dir}" />
+				
+				
+				
+				<testng classpathref="classpath.test" 
+					outputdir="${report.dir}"
+					verbose="2"
+					sourcedir="src/test/java/com/redhat/rhn/harness/Space01"
+					haltonfailure="false"
+					reporter="org.testng.reporters.JUnitXMLReporter"
+					listeners="com.redhat.qe.auto.selenium.TestNGListener com.redhat.rhn.harness.common.SatelliteTestopiaTestNGListener">
+
+
+					
+					<xmlfileset dir="src/test/java/com/redhat/rhn/harness/Space01/testng-tests" includes="${hudson.test.name}.xml"/>
+					
+					<sysproperty key="user.dir" value="${user.dir}"/>
+					<sysproperty key="hudson.rhn.host" value="${hudson.rhn.host}"/>
+					<sysproperty key="hudson.rhn.user" value="${hudson.rhn.user}"/>
+					<sysproperty key="hudson.rhn.pass" value="${hudson.rhn.pass}"/>
+					<sysproperty key="hudson.rhn.system01" value="${hudson.rhn.system01}"/>
+					<sysproperty key="hudson.rhn.system02" value="${hudson.rhn.system02}"/>
+					<sysproperty key="hudson.selenium.port" value="${hudson.selenium.port}"/>
+					<sysproperty key="hudson.sat.version" value="${hudson.sat.version}"/>
+					<sysproperty key="hudson.testopia.testrun.testplan" value="${hudson.test.name}"/>
+					
+					</testng>
+			    </target>
+
+</project>

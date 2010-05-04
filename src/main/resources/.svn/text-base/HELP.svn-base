@@ -1,0 +1,4 @@
+gYou can get rid of popups by opening selenium and accepting the cert permanently
+This works well if you are hitting the same server only.
+
+"java -jar /usr/local/selenium-remote-control-0.9.2/selenium-server-0.9.2/selenium-server.jar -multiWindow -firefoxProfileTemplate /usr/local/selenium-remote-control-0.9.2/customProfileDir"

@@ -1,0 +1,74 @@
+#solaris_support.yml
+#This is a representation of our current Solaris support matrix,
+#serialized as a YAML (www.yaml.org) file.
+#
+#Each entry maps to a SolUnit object, denoted by the !SolUnit tag at
+#the beginning of each sequence demarcation.
+#
+#The classfile for the SolUnit object resides in com.redhat.rhn.harness.common.SolUnit
+#
+#Sparc Architectures, sun4u
+--- !SolUnit
+  name: sol10-sun4u
+  solaris: sol10
+  arch: sun4u
+  rhn_arch: Sparc Solaris
+  cluster: sparc-sol10-testcluster.zip
+  patch: sol10patch
+  hostname: rhnsun2.rhnsun.rdu.redhat.com
+
+--- !SolUnit
+  name: sol9-sun4u
+  solaris: sol9
+  arch: sun4u
+  rhn_arch: Sparc Solaris
+  cluster: sparc-sol9-testcluster.zip
+  patch: sol9patch
+  hostname: rhnsun4.rhnsun.rdu.redhat.com
+  
+--- !SolUnit
+  name: sol8-sun4u
+  solaris: sol8
+  arch: sun4u
+  rhn_arch: Sparc Solaris
+  cluster: sparc-sol8-testcluster.zip
+  patch: sol8patch
+  hostname: rhnsun3.rhnsun.rdu.redhat.com
+  
+#Sparc Architectures, sun4v
+--- !SolUnit
+  name: sol10-sun4v
+  solaris: sol10
+  arch: sun4v
+  rhn_arch: Sparc Solaris
+  cluster: sparc-sol10-testcluster.zip
+  patch: sol10patch
+  hostname: rhnsun16.rhnsun.rdu.redhat.com
+
+--- !SolUnit
+  name: sol9-sun4v
+  solaris: sol9
+  arch: sun4v
+  rhn_arch: Sparc Solaris
+  cluster: sparc-sol9-testcluster.zip
+  patch: sol9patch
+  hostname: rhnsun17.rhnsun.rdu.redhat.com
+
+#x86 Architectures
+--- !SolUnit
+  name: sol10-x86
+  solaris: sol10
+  arch: x86
+  rhn_arch: i386 Solaris
+  cluster: x86-sol10-testcluster.zip
+  patch: sol10patch
+  hostname: rhnsun18.rhnsun.rdu.redhat.com
+  
+--- !SolUnit
+  name: sol9-i386
+  solaris: sol9
+  arch: x86
+  rhn_arch: i386 Solaris
+  cluster: x86-sol9-testcluster.zip
+  patch: sol9patch
+  hostname: rhnsun17.rhnsun.rdu.redhat.com

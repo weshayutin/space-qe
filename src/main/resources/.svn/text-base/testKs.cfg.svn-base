@@ -1,0 +1,50 @@
+install
+text
+network --bootproto dhcp
+url --url http://vault.rhndev.redhat.com/engarchive2/released/RHEL-5-Server/U3/i386/os/
+lang en_US
+langsupport --default en_US en_US
+keyboard us
+mouse none
+zerombr yes
+clearpart --all
+part /boot --fstype=ext3 --size=200
+part pv.01 --size=1000 --grow
+part swap --size=1000   --maxsize=2000
+volgroup myvg pv.01
+logvol / --vgname=myvg --name=rootvol --size=1000 --grow
+bootloader --location mbr
+timezone America/New_York
+auth --enablemd5 --enableshadow
+rootpw --iscrypted $1$ICh0WS91$bZ0o6DbMlypiHr31acbNm0
+selinux --permissive
+reboot
+firewall --disabled
+skipx
+key --skip
+
+%packages --resolvedeps
+
+@ Base
+
+%post --nochroot
+mkdir /mnt/sysimage/tmp/ks-tree-copy
+if [ -d /oldtmp/ks-tree-shadow ]; then
+cp -fa /oldtmp/ks-tree-shadow/* /mnt/sysimage/tmp/ks-tree-copy
+elif [ -d /tmp/ks-tree-shadow ]; then
+cp -fa /tmp/ks-tree-shadow/* /mnt/sysimage/tmp/ks-tree-copy
+fi
+cp /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
+
+%post
+( # Log %post errors 
+# now copy from the ks-tree we saved in the non-chroot checkout
+cp -fav /tmp/ks-tree-copy/* /
+rm -Rf /tmp/ks-tree-copy
+# --End RHN command section--
+) > /root/ks-post.log 2>&1
+
+# MOTD
+echo >> /etc/motd
+echo "Successful Kickstart File: $(date +'%Y-%m-%d')" >> /etc/motd
+echo >> /etc/motd

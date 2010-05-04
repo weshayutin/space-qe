@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RHNS Gold Tests Suite">
+  <test name="Satellite Whitelist tests" annotations="JDK">
+    <classes>
+      <class name="com.redhat.rhn.harness.gold.Space01.Authentication"/>
+      <class name="com.redhat.rhn.harness.gold.Space01.ActivationKeys"/>
+      <class name="com.redhat.rhn.harness.gold.Space01.QuickSearch01"/>
+      <class name="com.redhat.rhn.harness.gold.Space01.YourRHN"/>
+      <class name="com.redhat.rhn.harness.gold.Space01.UserRoles"/>      
+      <class name="com.redhat.rhn.harness.gold.Space01.RhnRegister"/>
+    </classes>
+  </test>
+</suite>

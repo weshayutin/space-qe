@@ -1,0 +1,8 @@
+#!/usr/bin/python
+from dogtail.procedural import *
+
+run("pup")
+
+focus.application('pup')
+focus.frame('Package Updater')
+click('Quit', roleName='push button')

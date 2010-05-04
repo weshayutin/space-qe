@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="1" name="Failed suite [rhn]" junit="false" annotations="JDK">
+  <test name="com.redhat.rhn.harness.satellite42.QuickSearch01(failed)" junit="false" annotations="JDK">
+    <classes>
+      <class name="com.redhat.rhn.harness.satellite42.QuickSearch01">
+        <methods>
+          <include name="test09Packages004"/>
+          <include name="test12Systems001"/>
+          <include name="test15Systems004"/>
+          <include name="test11Packages006"/>
+          <include name="test11Packages009"/>
+          <include name="test11Packages007"/>
+          <include name="test11Packages008"/>
+          <include name="test10Packages005"/>
+          <include name="test06Packages002"/>
+          <include name="test06Packages001"/>
+          <include name="test11Packages0010"/>
+          <include name="test11Packages00701"/>
+          <include name="test04Errata001"/>
+          <include name="setup"/>
+          <include name="test12Systems000"/>
+          <include name="test14Systems003"/>
+          <include name="test17Systems006"/>
+          <include name="test07Packages002"/>
+          <include name="test16Systems005"/>
+          <include name="test05Errata002"/>
+          <include name="test08Packages003"/>
+          <include name="test13Systems002"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,5 @@
+Total_Proxies=1
+Proxy_1_Hostname=fjs-0-17.rhndev.redhat.com
+Proxy_1_EmailAddress=ssalevan@redhat.com
+Proxy_1_Version=RHN Proxy v5.0
+Proxy_1_VersionNum=5.0

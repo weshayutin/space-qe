@@ -1,0 +1,147 @@
+
+#SATELLITE or SPACEWALK SERVER
+rhn.host=oldceremony.rhndev.redhat.com
+
+SATELLITE VERSION
+#4.2,5.0,5.1,5.2,5.3,space01  #space01 = 5.3 or current spacewalk04
+sat.version=space01
+
+#SATELLITE ADMIN USER
+rhn.user=admin
+
+#SATELLITE ADMIN PASSWORD
+rhn.pass=dog8code
+
+#SATELLITE ADMIN EMAIL
+rhn.email=whayutin@redhat.com
+
+#WEBQA USER ID
+rhn.webqa.id=whayutin
+
+#Location of satellite cert on server
+rhn.satellite.cert=/root/cert.cert
+
+#IMPORTANT, the ssh public key on the system/user that eclipse is running from
+ssh.publickey=ssh-dss AAAAB3NzaC1kc3MAAACBAN8TJNy3sRuh8lb+Jxqy8EZKa8DlmXWa8SqvemothLlsnb+VaDAOBA8nDrbVeteQuSofSlRU7q6PPKutaw96D+m/+78A6M9NJRaG8xWWjSIFSDFequHj3Leu94d7/Czzx5YNi+7QD6N+E6C7CVRhkgbA8I/5gfyfUgwstR1i14ARAAAAFQDIy3ssbs+MWF2UNd70mxbj0DwLKQAAAIEAs1pm8lVp5TmjI4y0SyOhXEnkowdPuVcCeiLJ/stXft/kAvXsIw87/I64541ggnOzSPRCb5Y3BhoiV9Pt9C7O+aSTE9PpICz8cmtTWRe0WGFv97VGEBAF0AaOI98DiLNHnNJLHf37XruitK+iVkQROaVvOat6eD+GkJEmWcLVBvUAAACBAKQez3ADp8qxHQZTLFDYlASSpFuadFEtAwqfdr2jUpSlE5FiQuCDMzTqBjU2X7RmO+b9F5lEK08BwiOBNDaCjZMWZwhZe+mrRJHyzQ0WrgOElporCbcvpB5yz7RoYskP8d1wIXpeMedvem6D5gAL7OnYrgVUDTBGcd7qbKBLNF92 whayutin@whayutin.rdu.redhat.com
+ssh.privatekeyloc=/home/yourhomedir/.ssh/id_dsa
+#If you _really_ want to put out your SSH passphrase, fill this in...
+ssh.keypassword=BAD_IDEA
+
+#SYSTEM01 SHOULD BE A RHEL 4 BOX
+rhn.system01=fjs-0-19.rhndev.redhat.com
+
+#SYSTEM02 SOHULD BE A RHEL 5 BOX W/ virt host
+rhn.system02=fjs-0-18.rhndev.redhat.com
+
+#SYSTEM03 SHOULD BE A X86_64 RHEL 4 BOX
+rhn.system03=fjs-0-19.rhndev.redhat.com
+
+#SYSTEM03 SHOULD BE A X86_64 RHEL 5 BOX
+rhn.system04=test02-64.rhndev.redhat.com
+
+#SYSTEM_Loadtest SOHULD BE A RHEL 4 BOX
+rhn.systemloadtest=fjs-0-12.rhndev.redhat.com
+
+#SYSTEM_anotherSatellite SOHULD BE A RHEL 4 BOX
+rhn.systemanothersatellite=
+
+#TEST SELinux, 0=off 1=on
+rhn.selinux=0
+
+#SPARC-based Solaris systems
+rhn.system.sol8=rhnsun1.rhnsun.rdu.redhat.com
+rhn.system.sol9=rhnsun4.rhnsun.rdu.redhat.com
+rhn.system.sol10=rhnsun2.rhnsun.rdu.redhat.com
+
+#x86-based Solaris systems
+rhn.system.sol9.x86=phil.collins.redhat.com
+rhn.system.sol10.x86=geddy.lee.redhat.com
+
+#WHEN CREATING MULTIPLE PROFILES, THE SYSTEMS NAME WILL BE PREPENDED W/ THE FOLLOWING
+rhn.testProfilePrefix=auto
+
+#RHN BASE CHANNEL NAMES
+rhn.channel01=Red Hat Enterprise Linux AS (v. 4 for 32-bit x86)
+#OSAD SETTING, 0 = off, 1 = on and will not run rhn_check
+rhn.osad=0
+
+#KICKSTART, additional kernel params needed to successfully kickstart some systems
+rhn.kern1=console=ttyS0,38400n8
+rhn.kern2=acpi=noirq
+
+#SELENIUM CONFIG
+#selenium.server=10.11.231.223
+selenium.server=0.0.0.0
+selenium.port=4444
+enable.screenshots=1
+
+#OCTOKICK CONFIG
+octokick.scriptlocation=/var/tmp/rhn/src/main/resources/octoScript.cfg
+octokick.scanSDC=1
+octokick.signedPackages=0
+
+#TESTOPIA SETTINGS
+#testopia.url=http://testopia-01.lab.bos.redhat.com/bugzilla/tr_xmlrpc.cgi
+testopia.url=http://testopia.devel.redhat.com/bugzilla/tr_xmlrpc.cgi
+testopia.login=whayutin@redhat.com
+testopia.password=b0rder
+testopia.testrun.product=Red Hat Network Satellite
+testopia.testrun.testplan=MultiOrg
+testopia.testrun.build=5.2.0 GA
+testopia.testrun.environment=WebQA
+testopia.testcase.overwrite=0
+
+##NEVRA TEST OPTIONS
+#0 : Means don't test NEVRA,  1 : Means test NEVRA
+enable.nevra.testing=0
+#SYSTEM04 SHOULD BE A CustomDistro {CentOS, Fedora9} BOX, Used in kickstart tests to custom distro
+rhn.system04=centos-or-fedora-box.rhndev.redhat.com
+nevra.custom.base_channel.name=CentOS 5.2-i386
+nevra.custom.base_channel.label=centos52-i386 
+##These are the minimum RPMs required to allow a centos client to interact with a 
+##satellite.  They should exist in the below child channel
+#koan-1.4.1-1.el5sat.noarch.rpm, rhn-client-tools-0.4.16-2.el5_1.9.noarch.rpm,
+#rhn-setup-0.4.16-2.el5_1.9.noarch.rpm, pyOpenSSL-0.6-1.p24.7.2.2.i386.rpm
+#rhnlib-2.2.6-2.el5.noarch.rpm, spacewalk-koan-0.1.8-1.el5sat.noarch.rpm
+#rhn-check-0.4.16-2.el5_1.9.noarch.rpm  rhnsd-4.6.1-1.el5.i386.rpm, 
+#yum-rhn-plugin-0.5.2-5.el5_1.2.noarch.rpm
+nevra.custom.child_channel.name=CentOS5.2 Tools 
+nevra.custom.child_channel.label=centos52-i386-tools 
+# Location for "Tree Path" value for custom kickstart distro
+# This is a directory on the Satellite under test.
+# The directory must contain the dirs 'images' and 'repodata' from the ISO.
+# It also must be readable by the apache user
+nevra.custom.ks_tree_path01=/var/www/html/customKS/centos52-i386
+# Name of wget accessible dir which has rpms for tools packages
+# spacewalk-koan, yum-rhn-plugin, etc.  The rpms needed for client to comm with Satellite.
+# this value is from perspective of wget so:  http://SATELLITE_ADDR/nevra.custom.tools_packages_dir
+# will yield the rpms.  Client grabs this after a KS in the post section of the ks file
+nevra.custom.tools_packages_url=pub/centos52-i386-tools
+
+#OTHER NON-ESSENTIAL PROPERTIES
+#0 for rhel channels, 1 for fedora,centos channels
+spacewalk=0
+#if spacewalk, define default activation key as --activationkey=1-11111
+sw.activationkey=
+#NUMBER OF POP-UPS to close.. ie certs, warnings etc.. no longer used much
+#usually 1 for webqa, 2 for satellite.
+rhn.pop=0
+rhn.nondminuser=autoTestUser
+rhn.removeAllSystemProfiles=true
+rhn.system.rhel4=rlx-2-16.rhndev.redhat.com
+rhn.system.rhel5=dhcp77-209.rhndev.redhat.com
+rhn.fake01=fakeSystems01
+rhn.fake02=fake__26060_x86_64_4ES
+svn.logtosvn=0
+svn.username=pcollins
+
+
+
+#ADVANCED CONFIG OPTIONS, dont change unless you know what you are doing
+selenium.browser=*chrome
+timeout=60000
+timeout.long=80000
+rhn.protocol=https://
+rhn.bvt.host=rlx-2-04.rhndev.redhat.com
+rhn.bvt=0
+#rhn.scriptDir=/home/rdu/whayutin/RHN_SETUP_FILES/

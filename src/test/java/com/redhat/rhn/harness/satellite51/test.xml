@@ -1,0 +1,281 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test">
+	
+ 	<test name="General WebUI Regression">
+		<groups>
+			<run>
+				<include name="setup"/>
+				<include name="teardown"/>
+				<include name="testplan-General_WebUI_Regression" />
+			</run>
+		</groups>
+		
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.YourRhn" />
+			<class name="com.redhat.rhn.harness.satellite51.Pagination01" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+
+	<test name="Search Package">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-SearchPackage" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.QuickSearch01" />
+			<class name="com.redhat.rhn.harness.satellite51.AdvancedSearch01" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>		
+	</test>
+	
+	 <test name="Search System">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-SearchSystem" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.QuickSearch01" />
+			<class name="com.redhat.rhn.harness.satellite51.AdvancedSearch01" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>		
+	</test>
+	
+	
+	<test name="Channels">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-SoftwareChannelManagement" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.Channels" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	
+	  <test name="ErrataManagement">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="testplan-ErrataManagement" />
+				<include name="teardown" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.ErrataManagement" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+
+	
+	  <test name="ConfigManagement1">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-ConfigurationManagement" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.ConfigManagement1" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	<test name="RhnRegister">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-Registration-Satellite" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.RhnRegister" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test> 
+	
+	
+	<test name="SdcSoftware">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-SDCSoftware" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.SdcSoftware" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	<test name="ActivationKeys">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-ActivationKeys" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.ActivationKeys" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test> 
+	
+	
+	<test name="UserRoles">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-User_Roles_and_Groups" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.UserRoles" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test> 
+	
+	
+	
+	<test name="Authentication">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-Authentication-Satellite" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.Authentication" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	<test name="MultiOrg">
+		<groups>
+			<run>
+				<include name="setup" /> 
+				<include name="teardown" />
+				<include name="testplan-Multi1Org-1" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.MultiOrg" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	<!--
+	<test name="SatelliteProxy">
+		<groups>
+			<run>
+				<include name="setup" /> 
+				<include name="teardown" />
+				<include name="testplan-SatelliteProxy" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.SatelliteProxy" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	<test name="VirtualizationTestSuite">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-Virtualization-Satellite" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.VirtualizationTestSuite" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test> -->
+	
+	 <!--<test name="KickStart">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-Kickstart" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.KickStart" /> 
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test> -->
+	
+	<!-- 
+	<test name="KickStart1">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-Kickstart" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.KickStartAdvanced" /> 
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	-->
+
+	
+	 <!-- 
+	<test name="Monitoring">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="Monitoring-Satellite" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.satellite51.Monitoring" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	 -->
+	
+
+	 
+	 
+	<listeners>
+  		<listener class-name="com.redhat.qe.auto.selenium.TestNGListener" />
+	</listeners>
+</suite>

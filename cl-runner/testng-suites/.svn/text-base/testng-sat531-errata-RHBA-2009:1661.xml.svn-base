@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Satellite 531 Errata RHBA-2009:1661 Tests Suite">
+  <test name="sat531 errata RHBA-2009:1661-04 tests" annotations="JDK">
+    <classes>
+      <class name="com.redhat.rhn.harness.regression.satellite531.BZ_537094"/>
+    </classes>
+  </test>
+</suite>

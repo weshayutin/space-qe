@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.redhat.rhn.harness.satellite42.QuickSearch01" failures="0" tests="21" time="0.087" errors="0">
+  <properties/>
+  <testcase name="@BeforeSuite setup" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <failure type="java.lang.UnsupportedOperationException" message="Catch body broken: IOException from cmd=windowMaximize -&gt; java.net.ConnectException: Connection refused">
+      <![CDATA[java.lang.UnsupportedOperationException: Catch body broken: IOException from cmd=windowMaximize -> java.net.ConnectException: Connection refused
+	at com.thoughtworks.selenium.HttpCommandProcessor.executeCommandOnServlet(HttpCommandProcessor.java:85)
+	at com.thoughtworks.selenium.HttpCommandProcessor.doCommand(HttpCommandProcessor.java:68)
+	at com.thoughtworks.selenium.DefaultSelenium.windowMaximize(DefaultSelenium.java:434)
+	at com.redhat.qe.auto.selenium.ExtendedSelenium.start(ExtendedSelenium.java:53)
+	at com.redhat.rhn.harness.common.SeleniumSetup.setup(SeleniumSetup.java:90)
+... Removed 15 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="@BeforeClass test00Prep00" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="@AfterMethod tearDown" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test09Packages004" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test12Systems001" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test15Systems004" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages006" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages009" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages007" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages008" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test10Packages005" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test06Packages002" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test06Packages001" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages0010" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test11Packages00701" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test04Errata001" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test12Systems000" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test17Systems006" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test14Systems003" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test16Systems005" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test07Packages002" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test05Errata002" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test08Packages003" time="0.0" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+  <testcase name="test13Systems002" time="0.001" classname="com.redhat.rhn.harness.satellite42.QuickSearch01">
+    <skipped/>
+  </testcase>
+</testsuite>

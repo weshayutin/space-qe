@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SatelliteSync">
+	
+	
+		 <test name="KickStart">
+		<groups>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<include name="testplan-SatelliteSync-NEVRA" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.redhat.rhn.harness.Space01.SatelliteSync" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	 
+			
+	<listeners>
+  		<listener class-name="com.redhat.qe.auto.selenium.TestNGListener" />
+	</listeners>
+	
+	<!--
+	<listeners>
+  		<listener class-name="com.redhat.qe.auto.selenium.TestNGListener" />
+  		<listener class-name="com.redhat.rhn.harness.common.SatelliteTestopiaTestNGListener" />
+	</listeners>
+	-->
+</suite>

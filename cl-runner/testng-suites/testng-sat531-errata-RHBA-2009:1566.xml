@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Satellite 531 Regression Tests Suite">
+  <test name="sat531 regression tests" annotations="JDK">
+    <classes>
+      <class name="com.redhat.rhn.harness.regression.satellite531.BZ_531059"/>
+      <class name="com.redhat.rhn.harness.regression.satellite531.BZ_522526"/>
+      <class name="com.redhat.rhn.harness.regression.satellite531.BZ_527724"/>
+    </classes>
+  </test>
+</suite>

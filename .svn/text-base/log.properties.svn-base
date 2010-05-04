@@ -1,0 +1,20 @@
+#Overall logging level,#FINE,FINER,FINEST
+.level = FINE
+
+#Basic logging
+#handlers = java.util.logging.ConsoleHandler,java.util.logging.FileHandler
+#Basic framework testopia logging
+#handlers = java.util.logging.ConsoleHandler,java.util.logging.FileHandler,com.redhat.qe.auto.testopia.TestProcedureHandler
+#RHN specific testopia logging
+handlers = java.util.logging.ConsoleHandler,java.util.logging.FileHandler,com.redhat.rhn.harness.common.SatelliteTestProcedureHandler
+
+#Logging level for testopia 
+com.redhat.qe.auto.testopia.TestProcedureHandler.level = INFO
+
+#Logging level for console #FINE,FINER,FINEST
+java.util.logging.ConsoleHandler.level = FINE
+java.util.logging.ConsoleHandler.formatter = com.redhat.rhn.harness.common.LogFormatter
+java.util.logging.FileHandler.formatter = com.redhat.rhn.harness.common.LogFormatter
+java.util.logging.FileHandler.pattern= /tmp/selenium-log
+sun.awt.level = SEVERE
+java.util.logging.FileHandler.formatter = com.redhat.qe.auto.selenium.LogFormatter

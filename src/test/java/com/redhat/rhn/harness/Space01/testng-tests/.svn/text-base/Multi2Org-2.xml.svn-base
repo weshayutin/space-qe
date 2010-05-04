@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MultiOrg-2">
+	
+	
+	<test name="MultiOrg-2">
+		<groups>
+			<define name="testplan-Multi2Org-2" >
+				<include name = "basic-trust" />
+			  	<include name = "shared-single-channel" /> 
+			  	<include name = "shared-errata-channel" /> 
+			  	<include name = "system-migration" />
+			  	<include name = "activation-key" />  
+			  	<include name = "child-channels" />  
+			 </define>
+			<run>
+				<include name="setup" />
+				<include name="teardown" />
+				<exclude name="satbug" />
+				<include name="testplan-Multi2Org-2" />
+			</run>
+		</groups>
+		<classes>
+		 	<class name="com.redhat.rhn.harness.Space01.MultiOrg2" />
+			<class name="com.redhat.rhn.harness.common.SeleniumSetup" />
+			<class name="com.redhat.qe.auto.selenium.ExtendedSelenium" />
+		</classes>
+	</test>
+	
+	
+
+	 
+			
+<!--	<listeners>
+  		<listener class-name="com.redhat.qe.auto.selenium.TestNGListener" />
+	</listeners>--> 
+	
+	
+	<listeners>
+  		<listener class-name="com.redhat.qe.auto.selenium.TestNGListener" />
+  		<listener class-name="com.redhat.rhn.harness.common.SatelliteTestopiaTestNGListener" />
+	</listeners>
+	
+</suite>
